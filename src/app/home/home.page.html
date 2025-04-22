@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-content class="ion-padding">
+    <ion-button id="open-toast" expand="block">Notificación</ion-button>
+    <ion-toast trigger="open-toast" message="Este toast desaparecerá después de 5 segundos" [duration]="5000"></ion-toast>
+  </ion-content>
+
+  <div id="container" class="ion-padding">
+    <ion-list>
+      <ion-item>
+        <ion-input label="Cédula"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Nombre Completo" placeholder="Ej. John Doe"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Dirección" value="121 S Pinckney St #300"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Readonly input" value="Madison" [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Código Postal" value="53703" [disabled]="true"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-datetime>
+    </ion-datetime>
+    <ion-chip>
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Usuario</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+  
+    <ion-chip>
+      <ion-icon name="pin" color="primary"></ion-icon>
+      <ion-label>Cerrar</ion-label>
+      <ion-icon name="close"></ion-icon>
+    </ion-chip>
+    
+  </div>
+  <div class="ion-padding">
+  <ion-radio-group value="masculino">
+    <ion-item>
+      <ion-label>Masculino</ion-label>
+      <ion-radio value="masculino"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Femenino</ion-label>
+      <ion-radio value="femenino"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-checkbox >I agree to the terms and conditions</ion-checkbox>
+  </div>
+</ion-content>
