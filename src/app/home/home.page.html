@@ -6,33 +6,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
-  <ion-content class="ion-padding">
-    <ion-button id="open-toast" expand="block">Notificación</ion-button>
-    <ion-toast trigger="open-toast" message="Este toast desaparecerá después de 5 segundos" [duration]="5000"></ion-toast>
-  </ion-content>
 
+<ion-content [fullscreen]="true">
   <div id="container" class="ion-padding">
+    
     <ion-list>
       <ion-item>
-        <ion-input label="Cédula"></ion-input>
+        <ion-input label="Cédula:"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="Nombre Completo" placeholder="Ej. John Doe"></ion-input>
+        <ion-input label="Nombre Completo:" placeholder="Ej. John Doe"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="Dirección" value="121 S Pinckney St #300"></ion-input>
+        <ion-input label="Dirección:" value="121 S Pinckney St #300"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="Readonly input" value="Madison" [readonly]="true"></ion-input>
+        <ion-input label="Pais:" value="Ecuador" [readonly]="true"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="Código Postal" value="53703" [disabled]="true"></ion-input>
+        <ion-input label="Código Postal" value="12345678" [disabled]="true"></ion-input>
       </ion-item>
     </ion-list>
     <ion-datetime>
@@ -44,26 +40,29 @@
       <ion-label>Usuario</ion-label>
       <ion-icon name="close-circle"></ion-icon>
     </ion-chip>
-  
     <ion-chip>
       <ion-icon name="pin" color="primary"></ion-icon>
       <ion-label>Cerrar</ion-label>
       <ion-icon name="close"></ion-icon>
     </ion-chip>
-    
-  </div>
-  <div class="ion-padding">
-  <ion-radio-group value="masculino">
-    <ion-item>
-      <ion-label>Masculino</ion-label>
-      <ion-radio value="masculino"></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label>Femenino</ion-label>
-      <ion-radio value="femenino"></ion-radio>
-    </ion-item>
-  </ion-radio-group>
+    <br>
+    <div class="label-left">
+      <ion-label>Sexo:</ion-label>
+    </div>
+    <ion-radio-group value="masculino">
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio value="masculino"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Femenino</ion-label>
+        <ion-radio value="femenino"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
 
-  <ion-checkbox >I agree to the terms and conditions</ion-checkbox>
+    <ion-checkbox>Acepto terminos y condiciones</ion-checkbox>
+    <ion-button id="open-toast" expand="block" class="ion-padding">Enviar</ion-button>
+    <ion-toast trigger="open-toast" message="Se ha enviado el formulario"
+      [duration]="5000"></ion-toast>
   </div>
 </ion-content>
